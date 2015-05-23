@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(src_dir, arch_dir)))
 import lib.Leap
 from lib.Leap import CircleGesture, KeyTapGesture, ScreenTapGesture, SwipeGesture
 
-class SampleListener(lib.Leap.Listener):
+class LeaperListener(lib.Leap.Listener):
 
     def on_connect(self, controller):
         print "Connected"
@@ -68,7 +68,7 @@ class SampleListener(lib.Leap.Listener):
         #     # pyautogui.moveTo(int(hand.palm_position[0]),None )
 
 def main():
-    listener = SampleListener()
+    listener = LeaperListener()
     controller = lib.Leap.Controller()
     controller.add_listener(listener)
 
